@@ -15,15 +15,15 @@
 
 Create a web api project and install following package.
 
-![swashbuckle-package](./images/Configure-initial.PNG)
+![swashbuckle-package](./images/swashbuckle-package.PNG)
 
 Register swagger generator in the ConfigureService method by adding following.
 
-![swashbuckle-package](./images/Configure-initial.PNG)
+![configureservice](./images/configureservice-initial.PNG)
 
 Then enable the middleware for serving the generated JSON document and the Swagger UI by adding following in Configure method.
 
-![swashbuckle-package](./images/Configure-initial.PNG)
+![configure](./images/configure-initial.PNG)
 
 At this point minimum requirement is there for swagger. So run the application and navigate to 'https://localhost:5001/swagger/index.html'.
 
@@ -34,7 +34,7 @@ Before get in to that add TodoController.cs, TodoModel.cs and TodoResponse.cs at
 Next right click and select edit the 'Swagger.csproj' and add following to it. This eanble Swashbuckle to incorporate those comments into the outputted Swagger JSON.
 Purpose of '<NoWarn>$(NoWarn);1591</NoWarn>' is to suppress warnings of classes or methods that are NOT annotated with XML comments from generating build warnings.
 
-![swashbuckle-package](./images/Configure-initial.PNG)
+![propertygroup](./images/propertygroup.PNG)
 
 After that add following to the ConfigureServices method. This adds xml file. XML file is mandatory for most of the features, namely method summaries and the descriptions of parameters and response codes. Reflection is used to build an XML file name matching that of the web API project. The AppContext.BaseDirectory property is used to construct a path to the XML file. 
 
@@ -42,22 +42,22 @@ After that add following to the ConfigureServices method. This adds xml file. XM
 
 Then add following to TodoController.cs file. In swagger, the one with the xml comments displays additional data while the other displays default information.
 
-![swashbuckle-package](./images/Configure-initial.PNG)
+![method1](./images/Todomethod1.PNG)
 
-![swashbuckle-package](./images/Configure-initial.PNG)
+![method2](./images/Todomethod2.PNG)
 
 Next add following to TodoModel.cs. There the required attribute will automatically flag as a "required" parameter in the generated Swagger.
 
-![swashbuckle-package](./images/Configure-initial.PNG)
+![todomodel](./images/Todomodel.PNG)
 
 Finally create the TodoResponce.cs with following.
 
-![swashbuckle-package](./images/Configure-initial.PNG)
+![todoresponse](./images/Todoresponse.PNG)
 
 Run the app again and have look at the swagger end points. There will be additiona description like this.
 
-![swashbuckle-package](./images/Configure-initial.PNG)
+![swaggerdescription](./images/swaggerdescription.PNG)
 
 Look Swagger schema, Todo model have the required property flagged as well.
 
-![swashbuckle-package](./images/Configure-initial.PNG)
+![swaggerschema](./images/swaggerschema.PNG)
