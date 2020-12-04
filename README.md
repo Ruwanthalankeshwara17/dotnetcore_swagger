@@ -38,7 +38,7 @@ Purpose of '<NoWarn>$(NoWarn);1591</NoWarn>' is to suppress warnings of classes 
 
 After that add following to the ConfigureServices method. This adds xml file. XML file is mandatory for most of the features, namely method summaries and the descriptions of parameters and response codes. Reflection is used to build an XML file name matching that of the web API project. The AppContext.BaseDirectory property is used to construct a path to the XML file. 
 
-![swashbuckle-package](./images/Configure-initial.PNG)
+![configuefinal](./images/configure-final.PNG)
 
 Then add following to TodoController.cs file. In swagger, the one with the xml comments displays additional data while the other displays default information.
 
