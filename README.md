@@ -30,27 +30,27 @@ At this point minimum requirement is there for swagger. Remove IIS profile from 
 ## Enable XML Comments
 
 XML comments alllows to add additional details such as description to swagger end points.
-Before get in to that add TodoController.cs, TodoModel.cs and TodoResponse.cs at root level.
+Before get in to that add 'TodoController.cs', 'TodoModel.cs' and 'TodoResponse.cs' at root level.
 Next right click and select edit the 'Swagger.csproj' and add following to it. This eanble Swashbuckle to incorporate those comments into the output Swagger JSON.
 Purpose of '<NoWarn>$(NoWarn);1591</NoWarn>' is to suppress warnings of classes or methods that are NOT annotated with XML comments from generating build warnings.
 
 ![propertygroup](./images/propertygroup.PNG)
 
-After that add following to the ConfigureServices method. This adds xml file. XML file is mandatory for most of the features, namely method summaries and the descriptions of parameters and response codes. Reflection is used to build an XML file name matching that of the web API project. The AppContext.BaseDirectory property is used to construct a path to the XML file. 
+After that add following to the 'ConfigureServices' method. This adds xml file. XML file is mandatory for most of the features, namely method summaries and the descriptions of parameters and response codes. Reflection is used to build an XML file name matching that of the web API project. The AppContext.BaseDirectory property is used to construct a path to the XML file. Then add following using statements 'using System.Reflection' and 'using System.IO'.
 
 ![configuefinal](./images/configure-final.PNG)
 
-Then add following to TodoController.cs file. In swagger, the one with the xml comments displays additional data while the other displays default information.
+Then add following to 'TodoController.cs' file. In swagger, the one with the xml comments displays additional data while the other displays default information.
 
 ![method1](./images/Todomethod1.PNG)
 
 ![method2](./images/Todomethod2.PNG)
 
-Next add following to TodoModel.cs. There the required attribute will automatically flag as a "required" parameter in the generated Swagger.
+Next add following to 'TodoModel.cs'. There the required attribute will automatically flag as a "required" parameter in the generated Swagger.
 
 ![todomodel](./images/Todomodel.PNG)
 
-Finally create the TodoResponce.cs with following.
+Finally create the 'TodoResponce.cs' with following.
 
 ![todoresponse](./images/Todoresponse.PNG)
 
