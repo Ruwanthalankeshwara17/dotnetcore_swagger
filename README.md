@@ -31,7 +31,7 @@ At this point minimum requirement is there for swagger. Remove IIS profile from 
 
 XML comments alllows to add additional details such as description to swagger end points.
 Before get in to that add TodoController.cs, TodoModel.cs and TodoResponse.cs at root level.
-Next right click and select edit the 'Swagger.csproj' and add following to it. This eanble Swashbuckle to incorporate those comments into the outputted Swagger JSON.
+Next right click and select edit the 'Swagger.csproj' and add following to it. This eanble Swashbuckle to incorporate those comments into the output Swagger JSON.
 Purpose of '<NoWarn>$(NoWarn);1591</NoWarn>' is to suppress warnings of classes or methods that are NOT annotated with XML comments from generating build warnings.
 
 ![propertygroup](./images/propertygroup.PNG)
