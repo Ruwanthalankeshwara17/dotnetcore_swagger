@@ -25,7 +25,7 @@ Then enable the middleware for serving the generated JSON document and the Swagg
 
 ![configure](./images/configure-initial.PNG)
 
-At this point minimum requirement is there for swagger. So run the application and navigate to 'https://localhost:5001/swagger/index.html'.
+At this point minimum requirement is there for swagger. Remove IIS profile from 'launchSettings.json' and run the application then navigate to 'https://localhost:5001/swagger/index.html'.
 
 ## Enable XML Comments
 
