@@ -17,11 +17,11 @@ Create a web api project and install following package.
 
 ![swashbuckle-package](./images/swashbuckle-package.PNG)
 
-Register swagger generator in the ConfigureServices method by adding following.
+Register swagger generator in the 'ConfigureServices' method by adding following. Add the following using statement 'using Microsoft.OpenApi.Models'. 
 
 ![configureservice](./images/configureservice-initial.PNG)
 
-Then enable the middleware for serving the generated JSON document and the Swagger UI by adding following in Configure method.
+Then enable the middleware for serving the generated JSON document and the Swagger UI by adding following in 'Configure' method.
 
 ![configure](./images/configure-initial.PNG)
 
