@@ -17,7 +17,7 @@ Create a web api project and install following package.
 
 ![swashbuckle-package](./images/swashbuckle-package.PNG)
 
-Register swagger generator in the ConfigureService method by adding following.
+Register swagger generator in the ConfigureServices method by adding following.
 
 ![configureservice](./images/configureservice-initial.PNG)
 
